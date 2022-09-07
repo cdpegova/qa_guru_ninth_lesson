@@ -55,22 +55,22 @@ public class FileParseHWOneTest {
             }
         }
     }
-/* @Test
+    @Test
     void parseZipWithXlsxTest() throws Exception {
-        InputStream is = classLoader.getResourceAsStream("xlsxfile.zip");
+        InputStream is = classLoader.getResourceAsStream("newxlsx.zip");
         ZipInputStream zip = new ZipInputStream(is);
-        ZipFile file = new ZipFile(new File("src/test/resources/" + "xlsxfile.zip"));
+        ZipFile file = new ZipFile(new File("src/test/resources/" + "newxlsx.zip"));
         ZipEntry entry;
         while ((entry = zip.getNextEntry()) != null) {
             try (InputStream stream = file.getInputStream(entry)) {
                 XLS xls = new XLS(stream);
                 assertThat(
-                        xls.excel.getSheetAt(0) //error: cannot access Workbook ???
+                        xls.excel.getSheetAt(0)
                                 .getRow(0)
                                 .getCell(0)
                                 .getStringCellValue()
-                ).contains("test_pdf");
+                ).contains("I");
             }
         }
-    }*/
+    }
 }
